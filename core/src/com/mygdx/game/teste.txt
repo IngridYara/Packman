@@ -1,0 +1,21 @@
+if (perdeu_vida) {
+
+				for (int i = m; i <= 2; i++) {
+
+					vidinhas.get(i).spawVidas(vidadrops);
+					perdeu = 1;
+					
+				}
+
+				batch.begin();
+				dentadura.drawVidas(batch, vidadrops);
+				batch.end();
+
+				if (TimeUtils.millis() - lastDropTime2 > 4600 && perdeu == 1) {
+					m++;
+					perdeu = 0;
+					lastDropTime2 = TimeUtils.millis();
+
+				}
+					
+			}
